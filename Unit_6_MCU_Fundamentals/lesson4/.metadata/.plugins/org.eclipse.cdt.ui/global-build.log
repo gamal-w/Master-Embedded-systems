@@ -1,0 +1,14 @@
+22:59:06 **** Incremental Build of configuration Debug for project lesson4_lab2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "lesson4_lab2.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded material\Embedd_diploma\Work-station\Master-Embedded-systems\Unit_6_MCU_Fundamentals\lesson4\lesson4_lab2\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lesson4_lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lesson4_lab2.elf
+ 
+arm-none-eabi-size   lesson4_lab2.elf 
+arm-none-eabi-objdump -h -S  lesson4_lab2.elf  > "lesson4_lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+    764	      8	   1568	   2340	    924	lesson4_lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lesson4_lab2.list
+ 
